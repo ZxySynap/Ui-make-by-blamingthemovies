@@ -856,25 +856,11 @@ function HorizonBarLibrary:CreateWindow(WindowProperties)
         function Console:CreateConsoleAlert(ConsoleAlertProperties)
 
             -- Console Alert Properties
-            local RobberyLocation = ConsoleAlertProperties.RobberyLocation
+            local RobberyName = ConsoleAlertProperties.RobberyLocation
             local RobberyStatus = ConsoleAlertProperties.RobberyStatus
             local RobberyIcon = ConsoleAlertProperties.Icon
 
-            -- Robbery Location Icons
-            local RobberyLocationIcons = {
-                ["Powerplant"] = "rbxassetid://14291151729",
-                ["Jewelery Store"] = "rbxassetid://14291198522",
-                ["Bank"] = "rbxassetid://14291211915",
-                ["Museum"] = "rbxassetid://14291182235",
-                ["Casino"] = "rbxassetid://14291221227",
-                ["Tomb"] = "rbxassetid://14291280449",
-                ["Gas Station"] = "rbxassetid://14291294183",
-                ["Donut Shop"] = "rbxassetid://14291308561",
-                ["Airdrop"] = "rbxassetid://14291273841",
-                ["Cargo Plane"] = "rbxassetid://14295690525",
-                ["Cargo Ship"] = "rbxassetid://14295685103",
-                ["Cargo Train"] = "rbxassetid://14295675152"
-            }
+           
 
             -- Console Alert
             local ConsoleAlert = Create("Frame", {
@@ -936,7 +922,7 @@ function HorizonBarLibrary:CreateWindow(WindowProperties)
                 Visible = true,
                 ClipsDescendants = false,
                 FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold),
-                Text = "[" .. RobberyLocation .. "]: " .. RobberyStatus,
+                Text = RobberyName .. RobberyStatus,
                 TextColor3 = ColorPalette.White,
                 TextSize = 14,
                 TextStrokeColor3 = ColorPalette.Black,
