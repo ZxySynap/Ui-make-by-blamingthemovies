@@ -936,6 +936,58 @@ function HorizonBarLibrary:CreateWindow(WindowProperties)
         end
         return Console
     end
+
+    Console:CreateSection(SectionProperties)
+
+            -- Section Properties
+            local Section_Name = SectionProperties.Name
+
+            -- Section
+            local Section = Create("Frame", {
+                Parent = ConsoleContainer,
+                Name = "Section",
+                AnchorPoint = Vector2.new(0, 0),
+                AutomaticSize = Enum.AutomaticSize.None,
+                BackgroundColor3 = ColorPalette.White,
+                BackgroundTransparency = 1,
+                BorderColor3 = ColorPalette.Black,
+                BorderSizePixel = 0,
+                Position = UDim2.new(0, 0, 0, 0),
+                Rotation = 0,
+                Size = UDim2.new(1, 0, 0, 20),
+                Visible = true,
+                ClipsDescendants = false
+            })
+
+            -- Section Name
+            local SectionName = Create("TextLabel", {
+                Parent = Section,
+                Name = "Name",
+                AnchorPoint = Vector2.new(0, 0),
+                AutomaticSize = Enum.AutomaticSize.None,
+                BackgroundColor3 = ColorPalette.White,
+                BackgroundTransparency = 1,
+                BorderColor3 = ColorPalette.Black,
+                BorderSizePixel = 0,
+                Position = UDim2.new(0, 0, 0, 0),
+                Rotation = 0,
+                Size = UDim2.new(1, 0, 1, 0),
+                Visible = true,
+                ClipsDescendants = false,
+                FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold),
+                Text = Section_Name,
+                TextColor3 = ColorPalette.White,
+                TextSize = 14,
+                TextStrokeColor3 = ColorPalette.Black,
+                TextStrokeTransparency = 1,
+                TextTransparency = 0,
+                TextTruncate = Enum.TextTruncate.AtEnd,
+                TextWrapped = false,
+                TextXAlignment = Enum.TextXAlignment.Center,
+                TextYAlignment = Enum.TextYAlignment.Center
+            })
+        end
+    
     -- Create Locations Tab Function
     function Window:CreateLocationsTab(LocationsTabProperties)
 
@@ -1547,7 +1599,7 @@ function HorizonBarLibrary:CreateWindow(WindowProperties)
                 Position = UDim2.new(0, 90, 0, 10)
             })
         end)
-
+        
         -- Miscellaneous 
         local Miscellaneous = {}
 
