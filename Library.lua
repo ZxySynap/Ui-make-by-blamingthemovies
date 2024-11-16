@@ -853,13 +853,13 @@ function HorizonBarLibrary:CreateWindow(WindowProperties)
             ConsoleStatusText.Text = Status
         end
 
-        function Console:CreateSection(SectionProperties)
+        function Console:CreateSection(Section2Properties)
 
             -- Section Properties
-            local Section_Name = SectionProperties.Name
+            local Section_Name2 = Section2Properties.Name
 
             -- Section
-            local Section = Create("Frame", {
+            local Section2 = Create("Frame", {
                 Parent = ConsoleContainer,
                 Name = "Section",
                 AnchorPoint = Vector2.new(0, 0),
@@ -877,7 +877,7 @@ function HorizonBarLibrary:CreateWindow(WindowProperties)
 
             -- Section Name
             local SectionName = Create("TextLabel", {
-                Parent = Section,
+                Parent = Section2,
                 Name = "Name",
                 AnchorPoint = Vector2.new(0, 0),
                 AutomaticSize = Enum.AutomaticSize.None,
@@ -891,7 +891,7 @@ function HorizonBarLibrary:CreateWindow(WindowProperties)
                 Visible = true,
                 ClipsDescendants = false,
                 FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold),
-                Text = Section_Name,
+                Text = Section_Name2,
                 TextColor3 = ColorPalette.White,
                 TextSize = 14,
                 TextStrokeColor3 = ColorPalette.Black,
