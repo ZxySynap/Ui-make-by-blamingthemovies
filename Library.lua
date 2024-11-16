@@ -843,6 +843,7 @@ function HorizonBarLibrary:CreateWindow(WindowProperties)
 
         local Console = {}
 
+
         -- Set Console Status Function
         function Console:SetConsoleStatus(ConsoleStatusProperties)
 
@@ -937,7 +938,7 @@ function HorizonBarLibrary:CreateWindow(WindowProperties)
         return Console
     end
 
-    Console:CreateSection(SectionProperties)
+    function Console:CreateSection(SectionProperties)
 
             -- Section Properties
             local Section_Name = SectionProperties.Name
