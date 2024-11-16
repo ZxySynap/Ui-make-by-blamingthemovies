@@ -799,7 +799,7 @@ function HorizonBarLibrary:CreateWindow(WindowProperties)
             Visible = true,
             ClipsDescendants = false,
             FontFace = Font.new("rbxasset://fonts/families/Ubuntu.json", Enum.FontWeight.Bold),
-            Text = os.time,
+            Text = os.time(),
             TextColor3 = ColorPalette.White,
             TextSize = 14,
             TextStrokeColor3 = ColorPalette.Black,
