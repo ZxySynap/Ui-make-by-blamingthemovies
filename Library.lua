@@ -858,6 +858,7 @@ function HorizonBarLibrary:CreateWindow(WindowProperties)
             -- Console Alert Properties
             local RobberyLocation = ConsoleAlertProperties.RobberyLocation
             local RobberyStatus = ConsoleAlertProperties.RobberyStatus
+            local RobberyIcon = ConsoleAlertProperties.Icon
 
             -- Robbery Location Icons
             local RobberyLocationIcons = {
@@ -913,7 +914,7 @@ function HorizonBarLibrary:CreateWindow(WindowProperties)
                 Size = UDim2.new(0, 16, 0, 16),
                 Visible = true,
                 ClipsDescendants = false,
-                Image = RobberyLocationIcons[RobberyLocation],
+                Image = RobberyIcon,
                 ImageColor3 = ColorPalette.White,
                 ImageTransparency = 0,
                 ScaleType = Enum.ScaleType.Stretch
